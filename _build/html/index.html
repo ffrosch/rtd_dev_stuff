@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Übersichtsseite! &mdash; Informationssammlung Programmierung &amp; Entwicklungsumgebung 1 Dokumentation</title>
+  <title>PHP &mdash; Informationssammlung Programmierung &amp; Entwicklungsumgebung 1 Dokumentation</title>
   
 
   
@@ -137,7 +137,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Übersichtsseite!</li>
+      <li>PHP</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -156,13 +156,67 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ubersichtsseite">
+  <div class="section" id="php">
+<h1>PHP<a class="headerlink" href="#php" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="class">
+<dt id="DateTime">
+<em class="property">class </em><code class="descname">DateTime</code><a class="headerlink" href="#DateTime" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Datetime class</p>
+<dl class="method">
+<dt id="DateTime::setDate">
+<code class="descname">setDate</code><span class="sig-paren">(</span><em>$year</em>, <em>$month</em>, <em>$day</em><span class="sig-paren">)</span><a class="headerlink" href="#DateTime::setDate" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Set the date.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>$year</strong> (<em>int</em>) – The year.</li>
+<li><strong>$month</strong> (<em>int</em>) – The month.</li>
+<li><strong>$day</strong> (<em>int</em>) – The day.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">Either false on failure, or the datetime object for method chaining.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="DateTime::setTime">
+<code class="descname">setTime</code><span class="sig-paren">(</span><em>$hour</em>, <em>$minute</em><span class="optional">[</span>, <em>$second</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#DateTime::setTime" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Set the time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>$hour</strong> (<em>int</em>) – The hour</li>
+<li><strong>$minute</strong> (<em>int</em>) – The minute</li>
+<li><strong>$second</strong> (<em>int</em>) – The second</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">Either false on failure, or the datetime object for method chaining.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="const">
+<dt id="DateTime::ATOM">
+<em class="property">constant </em><code class="descname">ATOM</code><a class="headerlink" href="#DateTime::ATOM" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Y-m-dTH:i:sP</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="ubersichtsseite">
 <h1>Übersichtsseite!<a class="headerlink" href="#ubersichtsseite" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-<div class="section" id="neuer-abschnitt">
-<h1>Neuer Abschnitt<a class="headerlink" href="#neuer-abschnitt" title="Link zu dieser Überschrift">¶</a></h1>
 <p><a class="reference external" href="http://rtd-dev-stuff.readthedocs.io/en/latest/">So schreibt man einen Link</a>.</p>
 <ul class="simple">
 <li>eine</li>
@@ -191,6 +245,17 @@
 <span class="pre">der</span> <span class="pre">zweizeilig</span> <span class="pre">ist.</span></code></p>
 <p><code class="docutils literal"><span class="pre">Abschnitt</span> <span class="pre">mit</span> <span class="pre">Code,</span></code>
 <code class="docutils literal"><span class="pre">der</span> <span class="pre">zweizeilig</span> <span class="pre">ist.</span></code></p>
+<p>Und hier ein Codeblock:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Abschnitt</span> <span class="n">mit</span> <span class="n">unformatiertem</span> <span class="n">Code</span><span class="p">,</span>
+<span class="n">der</span> <span class="n">zweizeilig</span> <span class="n">ist</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Diese Zeilen</div>
+<div class="line">werden genau wie gewollt</div>
+<div class="line">umgebrochen.</div>
+</div>
+<p><a class="reference external" href="http://example.com/">Inline Link</a></p>
 <p>Führe diese <code class="docutils literal"><span class="pre">Anweisungen</span></code> aus, der Doppelpunkt am Ende der Zeile ist dabei
 wichtig um das Folgende verkleinert und in einer Code-Box darzustellen:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$ vagrant up
@@ -208,12 +273,8 @@ wichtig um das Folgende verkleinert und in einer Code-Box darzustellen:</p>
 die in einem blauen Infokasten
 hervorgehoben werden sollen.</p>
 </div>
-<ul class="simple">
-<li><a class="reference internal" href="#springe-zu-anker"><span class="std std-ref">Hier ist der Anker zu dem gesprungen wurde!</span></a></li>
-</ul>
-</div>
-<div class="section" id="uberschrift">
-<h1>Überschrift<a class="headerlink" href="#uberschrift" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Hier ist ein Link innerhalb derselben Seite (desselben <code class="docutils literal"><span class="pre">*.rst</span></code> Dokuments): <a class="reference internal" href="#springe-zu-anker"><span class="std std-ref">Hier ist der Anker zu dem gesprungen wurde!</span></a>.</p>
+<p>Und so springt man zu einem anderen Dokument (anderer <code class="docutils literal"><span class="pre">*.rst</span></code> Datei) <a class="reference internal" href="dev_env.html"><span class="doc">Einrichten einer Entwicklungsumgebung</span></a>.</p>
 <div class="toctree-wrapper compound" id="springe-zu-anker">
 <p class="caption"><span class="caption-text">Hier ist der Anker zu dem gesprungen wurde!</span><a class="headerlink" href="#springe-zu-anker" title="Permanenter Link zu diesem Inhaltsverzeichnis">¶</a></p>
 <ul>
@@ -225,18 +286,11 @@ hervorgehoben werden sollen.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dev_env.html">Einrichten einer Entwicklungsumgebung</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dev_env.html#vagrant-einrichten">Vagrant einrichten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_env.html#python-fur-windows-nutzen">Python für Windows nutzen</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link zu dieser Überschrift">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Stichwortverzeichnis</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Modulindex</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Suche</span></a></li>
-</ul>
 </div>
 
 

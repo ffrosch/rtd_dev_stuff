@@ -3,8 +3,39 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+PHP
+====
+
+.. php:class:: DateTime
+
+  Datetime class
+
+  .. php:method:: setDate($year, $month, $day)
+
+      Set the date.
+
+      :param int $year: The year.
+      :param int $month: The month.
+      :param int $day: The day.
+      :returns: Either false on failure, or the datetime object for method chaining.
+
+
+  .. php:method:: setTime($hour, $minute[, $second])
+
+      Set the time.
+
+      :param int $hour: The hour
+      :param int $minute: The minute
+      :param int $second: The second
+      :returns: Either false on failure, or the datetime object for method chaining.
+
+  .. php:const:: ATOM
+
+      Y-m-d\TH:i:sP
+   
+   
 Übersichtsseite!
-======================================================================================
+=================
 
 `So schreibt man einen Link`_.
 
@@ -32,6 +63,17 @@ der zweizeilig ist.``
 ``Abschnitt mit Code,``
 ``der zweizeilig ist.``
 
+Und hier ein Codeblock::
+
+    Abschnitt mit unformatiertem Code,
+    der zweizeilig ist.
+
+| Diese Zeilen
+| werden genau wie gewollt
+| umgebrochen.
+
+`Inline Link <http://example.com/>`_
+    
 Führe diese ``Anweisungen`` aus, der Doppelpunkt am Ende der Zeile ist dabei
 wichtig um das Folgende verkleinert und in einer Code-Box darzustellen::
 
@@ -49,10 +91,9 @@ Then in your ``conf.py``:
           die in einem blauen Infokasten
           hervorgehoben werden sollen.
     
-* :ref:`springe-zu-anker`
+Hier ist ein Link innerhalb derselben Seite (desselben ``*.rst`` Dokuments): :ref:`springe-zu-anker`.
 
-Überschrift
-===========
+Und so springt man zu einem anderen Dokument (anderer ``*.rst`` Datei) :doc:`dev_env`.
 
 .. _springe-zu-anker:
 
