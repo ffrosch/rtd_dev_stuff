@@ -3,8 +3,48 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+Übersichtsseite!
+=================
+
+.. _dev-env:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Entwicklungsumgebung einrichten
+
+   dev-env/vagrant
+   dev-env/apache
+   dev-env/editors
+   dev-env/fotofallen
+
+.. _php:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: PHP-Wissen
+
+   php/frameworks
+
+.. _python:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Python-Wissen
+
+   python/python-einrichten
+
+.. _more-res:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Weitere Ressourcen
+
+   links
+
+
+
 PHP
-====
+----
 
 .. php:class:: DateTime
 
@@ -34,8 +74,8 @@ PHP
       Y-m-d\TH:i:sP
    
    
-Übersichtsseite!
-=================
+Weitere Beispiele
+------------------
 
 `So schreibt man einen Link`_.
 
@@ -68,6 +108,7 @@ Und hier ein Codeblock::
     Abschnitt mit unformatiertem Code,
     der zweizeilig ist.
 
+
 | Diese Zeilen
 | werden genau wie gewollt
 | umgebrochen.
@@ -93,7 +134,7 @@ Then in your ``conf.py``:
     
 Hier ist ein Link innerhalb derselben Seite (desselben ``*.rst`` Dokuments): :ref:`springe-zu-anker`.
 
-Und so springt man zu einem anderen Dokument (anderer ``*.rst`` Datei) :doc:`dev_env`.
+Und so springt man zu einem anderen Dokument (anderer ``*.rst`` Datei) :doc:`dev-env/vagrant`.
 
 .. _springe-zu-anker:
 
@@ -102,4 +143,3 @@ Und so springt man zu einem anderen Dokument (anderer ``*.rst`` Datei) :doc:`dev
    :caption: Hier ist der Anker zu dem gesprungen wurde!
 
    name-der-einzubindenden-rst
-   dev_env

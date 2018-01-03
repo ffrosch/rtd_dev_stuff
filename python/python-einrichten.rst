@@ -1,8 +1,6 @@
-﻿Einrichten einer Entwicklungsumgebung
-======================================
+﻿Python einrichten
+==================
 
-Vagrant einrichten
--------------------
 
 
 Python für Windows nutzen
