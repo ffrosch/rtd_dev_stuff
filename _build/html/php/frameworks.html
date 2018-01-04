@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Frameworks für PHP &mdash; Informationssammlung Programmierung &amp; Entwicklungsumgebung 1 Dokumentation</title>
+  <title>Frameworks &amp; CMSs &mdash; Dev-Zeug 1 Dokumentation</title>
   
 
   
@@ -35,9 +35,9 @@
         <link rel="index" title="Stichwortverzeichnis"
               href="../genindex.html"/>
         <link rel="search" title="Suche" href="../search.html"/>
-    <link rel="top" title="Informationssammlung Programmierung &amp; Entwicklungsumgebung 1 Dokumentation" href="../index.html"/>
-        <link rel="next" title="Nützliche Links" href="../links.html"/>
-        <link rel="prev" title="Übersicht Software" href="../dev-env/fotofallen.html"/> 
+    <link rel="top" title="Dev-Zeug 1 Dokumentation" href="../index.html"/>
+        <link rel="next" title="Python einrichten" href="../python/python-einrichten.html"/>
+        <link rel="prev" title="Auerhuhn-DB" href="../dbs/auerhuhn.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -56,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Informationssammlung Programmierung & Entwicklungsumgebung
+            <a href="../index.html" class="icon icon-home"> Dev-Zeug
           
 
           
@@ -92,23 +92,41 @@
             
               <p class="caption"><span class="caption-text">Entwicklungsumgebung einrichten</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../dev-env/vagrant.html">Vagrant 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dev-env/apache.html">Apache 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/windows.html">Entwicklungsumgebung unter Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/vagrant.html">Vagrant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/apache.html">Apache</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dev-env/editors.html">Welchen Editor verwenden?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dev-env/fotofallen.html">Übersicht Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/fotofallen.html">Fotofallen</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Datenbankentwicklung</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dbs/auerhuhn.html">Auerhuhn-DB</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PHP-Wissen</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Frameworks für PHP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frameworks &amp; CMSs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#php-frameworks">PHP-Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#php-cmss">PHP-CMSs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-frameworks">Python-Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-cmss">Python-CMSs</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Python-Wissen</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-einrichten.html">Python einrichten</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Weitere Ressourcen</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../links.html">Nützliche Links</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Anforderungskataloge</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../req/db-frontend.html">DB-Frontend</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Hier ist der Anker zu dem gesprungen wurde!</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../name-der-einzubindenden-rst.html">First Level Heading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dev_env.html">Einrichten einer Entwicklungsumgebung</a></li>
 </ul>
 
             
@@ -123,7 +141,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Informationssammlung Programmierung & Entwicklungsumgebung</a>
+          <a href="../index.html">Dev-Zeug</a>
         
       </nav>
 
@@ -153,7 +171,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Frameworks für PHP</li>
+      <li>Frameworks &amp; CMSs</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -172,12 +190,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="frameworks-fur-php">
-<h1>Frameworks für PHP<a class="headerlink" href="#frameworks-fur-php" title="Link zu dieser Überschrift">¶</a></h1>
+  <div class="section" id="frameworks-cmss">
+<h1>Frameworks &amp; CMSs<a class="headerlink" href="#frameworks-cmss" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Kleine Übersicht welche Software mir bereits über den Weg gelaufen ist.</p>
+<div class="section" id="php-frameworks">
+<h2>PHP-Frameworks<a class="headerlink" href="#php-frameworks" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>Codeigniter (nicht ganz auf dem neuesten Stand, bietet kein modernes Paket-Management</li>
-<li>Laravel (basiert auf Symfony)</li>
+<li><a class="reference external" href="https://codeigniter.com/">Codeigniter</a> (nicht ganz auf dem neuesten Stand, bietet kein modernes Paket-Management</li>
+<li><a class="reference external" href="https://laravel.com/">Laravel</a> (basiert auf Symfony)</li>
+<li><a class="reference external" href="https://framework.zend.com/">Zend</a></li>
+<li><a class="reference external" href="https://getbootstrap.com/">Bootstrap</a></li>
 </ul>
+<p>Weitere: CakePHP</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.quora.com/Which-is-better-Codeigniter-or-Zend-Why">Codeigniter VS Zend</a></li>
+<li><a class="reference external" href="https://therightsw.com/codeigniter-vs-laravel-vs-yii-vs-cakephp/">PHP Framework Comparison</a></li>
+</ul>
+<p><strong>Codeigniter</strong> (CI)
+Leicht zu lernen, nicht überladen, guter Einstieg in MVC.</p>
+<p><strong>Zend</strong>
+Bietet 100% objekt-orientierten Code. Nutzt Composer und PHPUnit. Hält sich an
+<a class="reference external" href="http://www.php-fig.org/">PHP-FIG</a> Standards. Gut für große Projekte.
+Schwer zu lernen/meistern, weil es sehr komplex ist und sehr strikte Regeln durchsetzt.
+Dafür ist die Pflege auch für andere Personen in der Zukunft leichter!</p>
+</div>
+<div class="section" id="php-cmss">
+<h2>PHP-CMSs<a class="headerlink" href="#php-cmss" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.drupal.de/">Drupal</a></li>
+<li><a class="reference external" href="https://www.joomla.de/">Joomla</a></li>
+</ul>
+<p><strong>Drupal</strong> kann als nutzerorientiertes Front-End für das DB-Management eingesetzt
+werden. Abfragen können mit dem Modul „<a class="reference external" href="https://www.ostraining.com/support-forum/drupal-support/drupal-as-database-management-tool-with-frontend/">Views</a>“ erstellt werden.
+Unterstützung für PostgreSQL <a class="reference external" href="http://pgedit.com/install_drupal">ist vorhanden</a>.</p>
+</div>
+<div class="section" id="python-frameworks">
+<h2>Python-Frameworks<a class="headerlink" href="#python-frameworks" title="Link zu dieser Überschrift">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.djangoproject.com/">Django</a></li>
+</ul>
+</div>
+<div class="section" id="python-cmss">
+<h2>Python-CMSs<a class="headerlink" href="#python-cmss" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
 </div>
 
 
@@ -190,10 +245,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../links.html" class="btn btn-neutral float-right" title="Nützliche Links" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../python/python-einrichten.html" class="btn btn-neutral float-right" title="Python einrichten" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../dev-env/fotofallen.html" class="btn btn-neutral" title="Übersicht Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../dbs/auerhuhn.html" class="btn btn-neutral" title="Auerhuhn-DB" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

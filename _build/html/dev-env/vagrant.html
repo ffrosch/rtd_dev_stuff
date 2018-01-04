@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Vagrant &mdash; Informationssammlung Programmierung &amp; Entwicklungsumgebung 1 Dokumentation</title>
+  <title>Vagrant &mdash; Dev-Zeug 1 Dokumentation</title>
   
 
   
@@ -35,9 +35,9 @@
         <link rel="index" title="Stichwortverzeichnis"
               href="../genindex.html"/>
         <link rel="search" title="Suche" href="../search.html"/>
-    <link rel="top" title="Informationssammlung Programmierung &amp; Entwicklungsumgebung 1 Dokumentation" href="../index.html"/>
+    <link rel="top" title="Dev-Zeug 1 Dokumentation" href="../index.html"/>
         <link rel="next" title="Apache" href="apache.html"/>
-        <link rel="prev" title="Übersichtsseite!" href="../index.html"/> 
+        <link rel="prev" title="Entwicklungsumgebung unter Windows" href="windows.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -56,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Informationssammlung Programmierung & Entwicklungsumgebung
+            <a href="../index.html" class="icon icon-home"> Dev-Zeug
           
 
           
@@ -92,6 +92,7 @@
             
               <p class="caption"><span class="caption-text">Entwicklungsumgebung einrichten</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Entwicklungsumgebung unter Windows</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Vagrant</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#vagrant-einrichten">Vagrant einrichten</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
@@ -100,15 +101,20 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#vagrant-konfigurieren">Vagrant konfigurieren</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fehler-beheben">Fehler beheben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links">Links</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apache.html">Apache</a></li>
 <li class="toctree-l1"><a class="reference internal" href="editors.html">Welchen Editor verwenden?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fotofallen.html">Übersicht Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fotofallen.html">Fotofallen</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Datenbankentwicklung</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dbs/auerhuhn.html">Auerhuhn-DB</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PHP-Wissen</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../php/frameworks.html">Frameworks für PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../php/frameworks.html">Frameworks &amp; CMSs</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Python-Wissen</span></p>
 <ul>
@@ -117,6 +123,10 @@
 <p class="caption"><span class="caption-text">Weitere Ressourcen</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../links.html">Nützliche Links</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Anforderungskataloge</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../req/db-frontend.html">DB-Frontend</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Hier ist der Anker zu dem gesprungen wurde!</span></p>
 <ul>
@@ -135,7 +145,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Informationssammlung Programmierung & Entwicklungsumgebung</a>
+          <a href="../index.html">Dev-Zeug</a>
         
       </nav>
 
@@ -186,13 +196,42 @@
             
   <div class="section" id="vagrant">
 <h1>Vagrant<a class="headerlink" href="#vagrant" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Vagrant ist eine sehr interessante und nützliche Software, um Enwicklungsumgebungen
+schnell und standardisiert einzurichten. Die Einarbeitung, das Troubleshooting
+und das Verstehen der spezifischen Fallstricke benötigt jedoch einige Tage.
+Insbesondere, da es nicht nur gilt Vagrant zu verstehen, sondern zusätzlich
+Virtual-Box, typische Aufgaben von Sys-Admins, Linux, Apache, Shell-Skripte,
+Puppet, uvm.</p>
 <div class="section" id="vagrant-einrichten">
 <h2>Vagrant einrichten<a class="headerlink" href="#vagrant-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein <a class="reference external" href="http://tech.osteel.me/posts/2015/01/25/how-to-use-vagrant-for-local-web-development.html">ausführlicher Guide</a> beschreibt die Einrichtung von Vagrant mit
+Port-Forwarding, Symlinks, Provisioning auf Basis von Shell-Skripten und
+einigen anderen interessanten Möglichkeiten.</p>
 <div class="section" id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h3>
 </div>
 <div class="section" id="box-einrichten">
 <h3>Box einrichten<a class="headerlink" href="#box-einrichten" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Der erste Schritt ist die Auswahl einer Base-Box. Die offiziellen ubuntu-Boxen
+sollen eine schlechte Qualität haben und entsprechen nicht dem Vagrant-Standard
+(e.g. Nutzername und Password ist nicht „vagrant“).
+Hashicorp (der Hersteller von Vagrant) bietet nur eine veraltete Ubuntu 12 Base-Box an.
+Hashicorp empfiehlt offiziell die Boxen im Bento-Namespace.
+Mehr dazu siehe in einem <a class="reference external" href="https://manski.net/2016/09/vagrant-multi-machine-tutorial/">Tutorial zur Erstellung multipler Vagrant-Boxen</a>.</p>
+<p>Drei verschiedene Varianten für die Einrichtung einer Vagrant-Box sind denkbar:</p>
+<blockquote>
+<div><ul class="simple">
+<li>VirtualBox-File wird erstellt, alles gewünschte installiert und konfiguriert
+und am Ende mit <code class="docutils literal"><span class="pre">vagrant</span> <span class="pre">package</span></code> eine Vagrant-Box daraus erstellt. Infos
+bspw. <a class="reference external" href="https://www.vagrantup.com/docs/virtualbox/boxes.html">hier</a>.</li>
+<li>Im <em>Vagrantfile</em> werden über den <code class="docutils literal"><span class="pre">provisioning</span></code> Befehl <code class="docutils literal"><span class="pre">*.sh</span></code> Skripte
+angegeben, in denen die Konfigurationsbefehle für Ubuntu festgehalten sind.</li>
+<li>Mit dem Tool <a class="reference external" href="https://puphpet.com/">PuPHPet</a> erstellt man sich eine Konfiguration seiner Wahl
+um bekommt die entsprechenden Skripte bereitgestellt. Als Grundlage dafür dient
+das Linux-Tool <em>Puppet</em>, welches jedoch weit mehr Einarbeitungszeit erfordern
+würde (sicherlich ein - zwei Wochen). Weitere Infos gibt es in einem <a class="reference external" href="https://return-true.com/beginners-guide-using-vagrant-with-puphpet-for-local-development/">Tutorial</a>.</li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="vagrant-konfigurieren">
@@ -200,6 +239,9 @@
 </div>
 <div class="section" id="fehler-beheben">
 <h2>Fehler beheben<a class="headerlink" href="#fehler-beheben" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Link zu dieser Überschrift">¶</a></h2>
 </div>
 </div>
 
@@ -216,7 +258,7 @@
         <a href="apache.html" class="btn btn-neutral float-right" title="Apache" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="Übersichtsseite!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="windows.html" class="btn btn-neutral" title="Entwicklungsumgebung unter Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

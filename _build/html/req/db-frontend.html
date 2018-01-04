@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welchen Editor verwenden? &mdash; Dev-Zeug 1 Dokumentation</title>
+  <title>DB-Frontend &mdash; Dev-Zeug 1 Dokumentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Suche" href="../search.html"/>
     <link rel="top" title="Dev-Zeug 1 Dokumentation" href="../index.html"/>
-        <link rel="next" title="Fotofallen" href="fotofallen.html"/>
-        <link rel="prev" title="Apache" href="apache.html"/> 
+        <link rel="next" title="First Level Heading" href="../name-der-einzubindenden-rst.html"/>
+        <link rel="prev" title="Nützliche Links" href="../links.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -91,20 +91,12 @@
             
             
               <p class="caption"><span class="caption-text">Entwicklungsumgebung einrichten</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="windows.html">Entwicklungsumgebung unter Windows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vagrant.html">Vagrant</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Welchen Editor verwenden?</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#editoren">Editoren</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#ides">IDEs</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fotofallen.html">Fotofallen</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/windows.html">Entwicklungsumgebung unter Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/vagrant.html">Vagrant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/apache.html">Apache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/editors.html">Welchen Editor verwenden?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/fotofallen.html">Fotofallen</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Datenbankentwicklung</span></p>
 <ul>
@@ -123,8 +115,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../links.html">Nützliche Links</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Anforderungskataloge</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../req/db-frontend.html">DB-Frontend</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DB-Frontend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#anforderungen">Anforderungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software">Software</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Hier ist der Anker zu dem gesprungen wurde!</span></p>
 <ul>
@@ -173,13 +169,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Welchen Editor verwenden?</li>
+      <li>DB-Frontend</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/dev-env/editors.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/req/db-frontend.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -192,30 +188,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welchen-editor-verwenden">
-<h1>Welchen Editor verwenden?<a class="headerlink" href="#welchen-editor-verwenden" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="section" id="editoren">
-<h2>Editoren<a class="headerlink" href="#editoren" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Link zu dieser Überschrift">¶</a></h3>
-<ul class="simple">
-<li>Notepad++</li>
-<li>Atom</li>
+  <div class="section" id="db-frontend">
+<h1>DB-Frontend<a class="headerlink" href="#db-frontend" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Bisher gibt es im Arbeitsbereich Wildtierökologie kein schlüssiges und einheitliches
+Konzept zur langfristigen Speicherung von Daten.</p>
+<div class="section" id="anforderungen">
+<h2>Anforderungen<a class="headerlink" href="#anforderungen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Schlüsselanforderungen:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Datenkonsistenz</li>
+<li>Einfachheit der Eingabe, Abfrage und Korrektur</li>
+<li>Daten liegen an einem zentralen Ort und sind auch in 10 Jahren noch auffindbar und nachvollziehbar</li>
 </ul>
-</div>
-<div class="section" id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Link zu dieser Überschrift">¶</a></h3>
-<ul class="simple">
-<li>Atom</li>
+</div></blockquote>
+<p>Erweiterte Anforderungen:</p>
+<blockquote>
+<div><ul class="simple">
+<li>User-Login auf Basis von Windows SSO (LDAP/Kerberos)</li>
+<li>Erstellung von benutzerdefinierten Views im DB-Schema des Benutzers</li>
 </ul>
+</div></blockquote>
 </div>
-</div>
-<div class="section" id="ides">
-<h2>IDEs<a class="headerlink" href="#ides" title="Link zu dieser Überschrift">¶</a></h2>
-<ul class="simple">
-<li>Eclipse</li>
-<li>Atom</li>
+<div class="section" id="software">
+<h2>Software<a class="headerlink" href="#software" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Apache</li>
+<li>PHP (Codeigniter-Framework)</li>
+<li>Bootstrap</li>
+<li>JavaScript Bibliotheken für interaktive Tabellen</li>
+<li>PostGIS</li>
+<li></li>
 </ul>
+</div></blockquote>
 </div>
 </div>
 
@@ -229,10 +235,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fotofallen.html" class="btn btn-neutral float-right" title="Fotofallen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../name-der-einzubindenden-rst.html" class="btn btn-neutral float-right" title="First Level Heading" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="apache.html" class="btn btn-neutral" title="Apache" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../links.html" class="btn btn-neutral" title="Nützliche Links" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

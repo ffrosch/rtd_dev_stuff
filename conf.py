@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Informationssammlung Programmierung & Entwicklungsumgebung'
+project = 'Dev-Zeug'
 copyright = '2017, Florian Frosch'
 author = 'Florian Frosch'
 

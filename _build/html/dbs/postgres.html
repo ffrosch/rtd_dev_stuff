@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welchen Editor verwenden? &mdash; Dev-Zeug 1 Dokumentation</title>
+  <title>PostgreSQL &mdash; Dev-Zeug 1 Dokumentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Suche" href="../search.html"/>
     <link rel="top" title="Dev-Zeug 1 Dokumentation" href="../index.html"/>
-        <link rel="next" title="Fotofallen" href="fotofallen.html"/>
-        <link rel="prev" title="Apache" href="apache.html"/> 
+        <link rel="next" title="Auerhuhn-DB" href="auerhuhn.html"/>
+        <link rel="prev" title="Fotofallen" href="../dev-env/fotofallen.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -91,24 +91,24 @@
             
             
               <p class="caption"><span class="caption-text">Entwicklungsumgebung einrichten</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="windows.html">Entwicklungsumgebung unter Windows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vagrant.html">Vagrant</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apache.html">Apache</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Welchen Editor verwenden?</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#editoren">Editoren</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#ides">IDEs</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fotofallen.html">Fotofallen</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/windows.html">Entwicklungsumgebung unter Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/vagrant.html">Vagrant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/apache.html">Apache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/editors.html">Welchen Editor verwenden?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/fotofallen.html">Fotofallen</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Datenbankentwicklung</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../dbs/auerhuhn.html">Auerhuhn-DB</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PostgreSQL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#zugriff-auf-postgresql">Zugriff auf PostgreSQL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ogr2ogr">ogr2ogr</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#verhalten-von-constraints">Verhalten von Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auerhuhn.html">Auerhuhn-DB</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PHP-Wissen</span></p>
 <ul>
@@ -173,13 +173,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Welchen Editor verwenden?</li>
+      <li>PostgreSQL</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/dev-env/editors.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/dbs/postgres.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -192,30 +192,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welchen-editor-verwenden">
-<h1>Welchen Editor verwenden?<a class="headerlink" href="#welchen-editor-verwenden" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="section" id="editoren">
-<h2>Editoren<a class="headerlink" href="#editoren" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Link zu dieser Überschrift">¶</a></h3>
-<ul class="simple">
-<li>Notepad++</li>
-<li>Atom</li>
-</ul>
-</div>
-<div class="section" id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Link zu dieser Überschrift">¶</a></h3>
-<ul class="simple">
-<li>Atom</li>
-</ul>
+  <div class="section" id="postgresql">
+<h1>PostgreSQL<a class="headerlink" href="#postgresql" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Sammlung von hilfreichem Wissen zur Funktionsweise von PostgreSQL, Tipps &amp; Tricks,
+Codeschnipseln, Rezepten, guten Funktionen, etc.</p>
+<div class="section" id="zugriff-auf-postgresql">
+<h2>Zugriff auf PostgreSQL<a class="headerlink" href="#zugriff-auf-postgresql" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ogr2ogr">
+<h3>ogr2ogr<a class="headerlink" href="#ogr2ogr" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Sehr nützliches Kommandozeilenprogramm, mit dem sich schnell ein Shapefile in
+PostGIS importieren lässt. Einige Dinge muss man jedoch wissen.</p>
 </div>
 </div>
-<div class="section" id="ides">
-<h2>IDEs<a class="headerlink" href="#ides" title="Link zu dieser Überschrift">¶</a></h2>
-<ul class="simple">
-<li>Eclipse</li>
-<li>Atom</li>
-</ul>
+<div class="section" id="verhalten-von-constraints">
+<h2>Verhalten von Constraints<a class="headerlink" href="#verhalten-von-constraints" title="Link zu dieser Überschrift">¶</a></h2>
+<p><strong class="command">PRIMARY KEY</strong> entspricht in seinem Verhalten fast gänzlich der Kombination
+aus <strong class="command">UNIQUE</strong> und <strong class="command">NOT NULL</strong>. Für manche Anwendungsfälle,
+z.B. wenn Daten mit ogr2ogr importiert werden sollen, kann es nötig sein letzteres
+zu verwenden. Der einzige Vorteil von PRIMARY KEY ist, dass Postgres automatisch
+auf ihn zurück greift falls ein FOREIGN KEY sich auf die Tabelle bezieht ohne
+eine Spalte anzugeben.</p>
 </div>
 </div>
 
@@ -229,10 +225,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fotofallen.html" class="btn btn-neutral float-right" title="Fotofallen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="auerhuhn.html" class="btn btn-neutral float-right" title="Auerhuhn-DB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="apache.html" class="btn btn-neutral" title="Apache" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../dev-env/fotofallen.html" class="btn btn-neutral" title="Fotofallen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Übersichtsseite! &mdash; Informationssammlung Programmierung &amp; Entwicklungsumgebung 1 Dokumentation</title>
+  <title>Übersichtsseite! &mdash; Dev-Zeug 1 Dokumentation</title>
   
 
   
@@ -35,8 +35,8 @@
         <link rel="index" title="Stichwortverzeichnis"
               href="genindex.html"/>
         <link rel="search" title="Suche" href="search.html"/>
-    <link rel="top" title="Informationssammlung Programmierung &amp; Entwicklungsumgebung 1 Dokumentation" href="#"/>
-        <link rel="next" title="Vagrant" href="dev-env/vagrant.html"/> 
+    <link rel="top" title="Dev-Zeug 1 Dokumentation" href="#"/>
+        <link rel="next" title="Entwicklungsumgebung unter Windows" href="dev-env/windows.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -55,7 +55,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Informationssammlung Programmierung & Entwicklungsumgebung
+            <a href="#" class="icon icon-home"> Dev-Zeug
           
 
           
@@ -91,14 +91,20 @@
             
               <p class="caption"><span class="caption-text">Entwicklungsumgebung einrichten</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="dev-env/windows.html">Entwicklungsumgebung unter Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev-env/vagrant.html">Vagrant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev-env/apache.html">Apache</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev-env/editors.html">Welchen Editor verwenden?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dev-env/fotofallen.html">Übersicht Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev-env/fotofallen.html">Fotofallen</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Datenbankentwicklung</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dbs/postgres.html">PostgreSQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dbs/auerhuhn.html">Auerhuhn-DB</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PHP-Wissen</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="php/frameworks.html">Frameworks für PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="php/frameworks.html">Frameworks &amp; CMSs</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Python-Wissen</span></p>
 <ul>
@@ -107,6 +113,10 @@
 <p class="caption"><span class="caption-text">Weitere Ressourcen</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="links.html">Nützliche Links</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Anforderungskataloge</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="req/db-frontend.html">DB-Frontend</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Hier ist der Anker zu dem gesprungen wurde!</span></p>
 <ul>
@@ -125,7 +135,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Informationssammlung Programmierung & Entwicklungsumgebung</a>
+          <a href="#">Dev-Zeug</a>
         
       </nav>
 
@@ -179,10 +189,12 @@
 <div class="toctree-wrapper compound" id="dev-env">
 <p class="caption"><span class="caption-text">Entwicklungsumgebung einrichten</span><a class="headerlink" href="#dev-env" title="Permanenter Link zu diesem Inhaltsverzeichnis">¶</a></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="dev-env/windows.html">Entwicklungsumgebung unter Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev-env/vagrant.html">Vagrant</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dev-env/vagrant.html#vagrant-einrichten">Vagrant einrichten</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dev-env/vagrant.html#vagrant-konfigurieren">Vagrant konfigurieren</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dev-env/vagrant.html#fehler-beheben">Fehler beheben</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev-env/vagrant.html#links">Links</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dev-env/apache.html">Apache</a><ul>
@@ -195,13 +207,36 @@
 <li class="toctree-l2"><a class="reference internal" href="dev-env/editors.html#ides">IDEs</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="dev-env/fotofallen.html">Übersicht Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev-env/fotofallen.html">Fotofallen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev-env/fotofallen.html#ubersicht-software">Übersicht Software</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="dbs">
+<p class="caption"><span class="caption-text">Datenbankentwicklung</span><a class="headerlink" href="#dbs" title="Permanenter Link zu diesem Inhaltsverzeichnis">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dbs/postgres.html">PostgreSQL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dbs/postgres.html#zugriff-auf-postgresql">Zugriff auf PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dbs/postgres.html#verhalten-von-constraints">Verhalten von Constraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dbs/auerhuhn.html">Auerhuhn-DB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dbs/auerhuhn.html#shapefile-laden">Shapefile laden</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="php">
 <p class="caption"><span class="caption-text">PHP-Wissen</span><a class="headerlink" href="#php" title="Permanenter Link zu diesem Inhaltsverzeichnis">¶</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="php/frameworks.html">Frameworks für PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="php/frameworks.html">Frameworks &amp; CMSs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="php/frameworks.html#php-frameworks">PHP-Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php/frameworks.html#php-cmss">PHP-CMSs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php/frameworks.html#python-frameworks">Python-Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="php/frameworks.html#python-cmss">Python-CMSs</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound" id="python">
@@ -218,6 +253,16 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="links.html">Nützliche Links</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="links.html#tutorials">Tutorials</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="requirements">
+<p class="caption"><span class="caption-text">Anforderungskataloge</span><a class="headerlink" href="#requirements" title="Permanenter Link zu diesem Inhaltsverzeichnis">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="req/db-frontend.html">DB-Frontend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="req/db-frontend.html#anforderungen">Anforderungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="req/db-frontend.html#software">Software</a></li>
 </ul>
 </li>
 </ul>
@@ -365,7 +410,7 @@ hervorgehoben werden sollen.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dev-env/vagrant.html" class="btn btn-neutral float-right" title="Vagrant" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dev-env/windows.html" class="btn btn-neutral float-right" title="Entwicklungsumgebung unter Windows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

@@ -1,7 +1,12 @@
 ﻿Apache
 =======
 
+**Apache** ist neben **nginx** (sprich: *engine-x*) der klassische Provider für
+Http-Services.
 
+Hilfreiche Informationen finden sich bspw. auf der `Ubuntu-Website`_.
+
+.. _Ubuntu-Website: https://wiki.ubuntuusers.de/Apache_2.4/
 
 Server einrichten
 ------------------

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welchen Editor verwenden? &mdash; Dev-Zeug 1 Dokumentation</title>
+  <title>Entwicklungsumgebung unter Windows &mdash; Dev-Zeug 1 Dokumentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Suche" href="../search.html"/>
     <link rel="top" title="Dev-Zeug 1 Dokumentation" href="../index.html"/>
-        <link rel="next" title="Fotofallen" href="fotofallen.html"/>
-        <link rel="prev" title="Apache" href="apache.html"/> 
+        <link rel="next" title="Vagrant" href="vagrant.html"/>
+        <link rel="prev" title="Übersichtsseite!" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,18 +92,10 @@
             
               <p class="caption"><span class="caption-text">Entwicklungsumgebung einrichten</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="windows.html">Entwicklungsumgebung unter Windows</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Entwicklungsumgebung unter Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vagrant.html">Vagrant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apache.html">Apache</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Welchen Editor verwenden?</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#editoren">Editoren</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#ides">IDEs</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="editors.html">Welchen Editor verwenden?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fotofallen.html">Fotofallen</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Datenbankentwicklung</span></p>
@@ -173,13 +165,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Welchen Editor verwenden?</li>
+      <li>Entwicklungsumgebung unter Windows</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/dev-env/editors.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/dev-env/windows.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -192,31 +184,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welchen-editor-verwenden">
-<h1>Welchen Editor verwenden?<a class="headerlink" href="#welchen-editor-verwenden" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="section" id="editoren">
-<h2>Editoren<a class="headerlink" href="#editoren" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Link zu dieser Überschrift">¶</a></h3>
-<ul class="simple">
-<li>Notepad++</li>
-<li>Atom</li>
-</ul>
+  <div class="section" id="entwicklungsumgebung-unter-windows">
+<h1>Entwicklungsumgebung unter Windows<a class="headerlink" href="#entwicklungsumgebung-unter-windows" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Eine Entwicklungsumgebung lässt sich unter Windows am schnellsten einrichten,
+wenn man Vagrant, etc. umgeht. Für mich hat sich der Einsatz von <a class="reference external" href="http://www.uniformserver.com/">Uniform-Webserver</a>
+oder <a class="reference external" href="https://www.apachefriends.org/de/index.html">XAMPP</a> zusammen mit PostgreSQL bewährt.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>PostgreSQL</strong> - ist eine Installation möglich, sollte diese Variante gewählt werden.
+PostgreSQL wird dann automatisch in den Autostart von Windows eingetragen,
+sodass der Server stets läuft und verfügbar ist. Alternativ bietet sich aber
+auch die Einrichtung als portable Version an. Siehe dazu dieses <a class="reference external" href="http://www.postgresonline.com/journal/archives/172-Starting-PostgreSQL-in-windows-without-install.html">Tutorial</a>.</li>
+<li><strong>Apache-Webserver</strong> - dieser wird für die Entwicklung mit PHP benötigt.
+Eine XAMPP-Installation ist hierfür gut geeignet. Für die Nutzung mit PostgreSQL
+müssen unter <code class="docutils literal"><span class="pre">c:\xampp\php\php.ini</span></code> die beiden Zeilen <code class="docutils literal"><span class="pre">extension=php_pdo_pgsql.dll</span></code>
+und <code class="docutils literal"><span class="pre">extension=php_pgsql.dll</span></code> auskommentiert werden. In der <code class="docutils literal"><span class="pre">C:\xampp\apache\conf\httpd.conf</span></code>
+wird noch der Befehl <code class="docutils literal"><span class="pre">LoadFile</span> <span class="pre">&quot;C:\xampp\php\libpq.dll&quot;</span></code> eingetragen.
+Zuletzt muss sichergestellt werden, dass die Ports 80 und 443 nicht von anderen Programmen
+belegt sind. Eine Änderung der Ports für Apache ist in Xampp zwar möglich,
+scheint aber nicht out-of-the-box zu funktionieren. Die Ports werden i.d.R. durch Skype
+oder durch die Windows-Informationsdienste belegt. Für Skype lässt sich dies
+unter den Erweiterten Optionen ändern. Die Windows-Informationsdienste können
+über Systemsteuerung &gt; Programme &gt; Windows-Funktionen aktivieren oder deaktivieren
+ausgeschaltet werden (Menüpunkt „Internetinformationsdienste“).</li>
+</ol>
+</div></blockquote>
+<p>Nun ein schneller Test, um zu sehen ob Postgres über den Apache-Server ansprechbar ist.
+Hierfür wird eine PHP-Datei unter <code class="docutils literal"><span class="pre">c:\xampp\htdocs</span></code> mit folgendem Inhalt erstellt:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="nv">$link</span> <span class="o">=</span> <span class="nb">pg_connect</span><span class="p">(</span><span class="s2">&quot;host=localhost port=5432 dbname=postgres user=postgres password=mypassword&quot;</span><span class="p">);</span>
+<span class="nb">print_r</span><span class="p">(</span><span class="nv">$link</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
 </div>
-<div class="section" id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Link zu dieser Überschrift">¶</a></h3>
-<ul class="simple">
-<li>Atom</li>
-</ul>
-</div>
-</div>
-<div class="section" id="ides">
-<h2>IDEs<a class="headerlink" href="#ides" title="Link zu dieser Überschrift">¶</a></h2>
-<ul class="simple">
-<li>Eclipse</li>
-<li>Atom</li>
-</ul>
-</div>
+<p>Funktioniert die Abfrage wird ein Wert ausgegeben, andernfalls ein Error!</p>
 </div>
 
 
@@ -229,10 +230,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fotofallen.html" class="btn btn-neutral float-right" title="Fotofallen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="vagrant.html" class="btn btn-neutral float-right" title="Vagrant" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="apache.html" class="btn btn-neutral" title="Apache" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral" title="Übersichtsseite!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
