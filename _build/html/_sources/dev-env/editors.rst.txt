@@ -8,14 +8,12 @@ Windows
 ~~~~~~~~
 
 * Notepad++
-* Atom
+* Atom (IDE)
+* Eclipse (IDE)
+
 
 Linux
 ~~~~~~
 
 * Atom
-
-IDEs
------
-* Eclipse
-* Atom
+* Eclipse (IDE)

@@ -42,6 +42,7 @@
    :caption: Python-Wissen
 
    python/python-einrichten
+   python/python-tricks
 
 .. _more-res:
 

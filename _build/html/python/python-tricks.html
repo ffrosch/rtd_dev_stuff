@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Apache &mdash; Dev-Zeug 1 Dokumentation</title>
+  <title>Python Tricks &mdash; Dev-Zeug 1 Dokumentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Suche" href="../search.html"/>
     <link rel="top" title="Dev-Zeug 1 Dokumentation" href="../index.html"/>
-        <link rel="next" title="Welchen Editor verwenden?" href="editors.html"/>
-        <link rel="prev" title="Vagrant" href="vagrant.html"/> 
+        <link rel="next" title="Nützliche Links" href="../links.html"/>
+        <link rel="prev" title="Python einrichten" href="python-einrichten.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -91,16 +91,12 @@
             
             
               <p class="caption"><span class="caption-text">Entwicklungsumgebung einrichten</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="windows.html">Entwicklungsumgebung unter Windows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vagrant.html">Vagrant</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Apache</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#server-einrichten">Server einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#server-konfigurieren">Server konfigurieren</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="editors.html">Welchen Editor verwenden?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fotofallen.html">Fotofallen</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/windows.html">Entwicklungsumgebung unter Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/vagrant.html">Vagrant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/apache.html">Apache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/editors.html">Welchen Editor verwenden?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-env/fotofallen.html">Fotofallen</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Datenbankentwicklung</span></p>
 <ul>
@@ -112,8 +108,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../php/frameworks.html">Frameworks &amp; CMSs</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Python-Wissen</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../python/python-einrichten.html">Python einrichten</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python-einrichten.html">Python einrichten</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python Tricks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#commandline-commands">Commandline commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Weitere Ressourcen</span></p>
 <ul>
@@ -170,13 +173,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Apache</li>
+      <li>Python Tricks</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/dev-env/apache.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/python/python-tricks.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -189,37 +192,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="apache">
-<h1>Apache<a class="headerlink" href="#apache" title="Link zu dieser Überschrift">¶</a></h1>
-<p><strong>Apache</strong> ist neben <strong>nginx</strong> (sprich: <em>engine-x</em>) der klassische Provider für
-Http-Services.</p>
-<p>Hilfreiche Informationen finden sich bspw. auf der <a class="reference external" href="https://wiki.ubuntuusers.de/Apache_2.4/">Ubuntu-Website</a>.</p>
-<div class="section" id="server-einrichten">
-<h2>Server einrichten<a class="headerlink" href="#server-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Installation über Ubuntu-Terminal:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">apache2</span>
+  <div class="section" id="python-tricks">
+<h1>Python Tricks<a class="headerlink" href="#python-tricks" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="commandline-commands">
+<h2>Commandline commands<a class="headerlink" href="#commandline-commands" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">py</span> <span class="o">-</span><span class="mi">3</span>
+<span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">pipenv</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Der Apache-Server wird nach der Installation sofort gestartet und
-wird bei jedem Neustart automatisch geladen. Er läuft auf
-<strong>localhost</strong> Port <strong>80</strong>.</p>
+<div class="section" id="background">
+<h3>Background<a class="headerlink" href="#background" title="Link zu dieser Überschrift">¶</a></h3>
+<p><strong>pipenv</strong> ist ein dependency manager für Python und mächtiger als pip alleine.
+Er erstellt automatisch virtuelle Umgebungen. Mit der <code class="docutils literal"><span class="pre">--user</span></code> Option soll
+verhindert werden, dass systemweite Packages beschädigt werden. Sollte
+nach der Installation <em>pipenv</em> nicht per <em>cmd</em> aufrufbar sein, muss der Pfad
+<code class="docutils literal"><span class="pre">C:\Users\Flo\AppData\Roaming\Python\Python36\Scripts</span></code> manuell in die
+PATH-Variable von Windows eingefügt werden.</p>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Bemerkung</p>
-<p class="last">Bei der Verwendung von <strong>Vagrant</strong> muss im <em>Vagrantfile</em> ein
-Port-Forwarding eingerichtet werden.</p>
-</div>
-<p>Port-Forwarding in Vagrant:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="p">:</span><span class="n">forwarded_port</span><span class="p">,</span> <span class="n">guest</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="n">host</span><span class="p">:</span> <span class="mi">8080</span>
-</pre></div>
-</div>
-<p>Websites in der Virtuellen Maschine sind nun über <strong>localhost:8080</strong> im
-Browser aufrufbar.</p>
-</div>
-<div class="section" id="server-konfigurieren">
-<h2>Server konfigurieren<a class="headerlink" href="#server-konfigurieren" title="Link zu dieser Überschrift">¶</a></h2>
 </div>
 </div>
 
@@ -233,10 +227,10 @@ Browser aufrufbar.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="editors.html" class="btn btn-neutral float-right" title="Welchen Editor verwenden?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../links.html" class="btn btn-neutral float-right" title="Nützliche Links" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="vagrant.html" class="btn btn-neutral" title="Vagrant" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="python-einrichten.html" class="btn btn-neutral" title="Python einrichten" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

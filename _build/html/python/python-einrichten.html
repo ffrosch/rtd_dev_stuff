@@ -36,7 +36,7 @@
               href="../genindex.html"/>
         <link rel="search" title="Suche" href="../search.html"/>
     <link rel="top" title="Dev-Zeug 1 Dokumentation" href="../index.html"/>
-        <link rel="next" title="Nützliche Links" href="../links.html"/>
+        <link rel="next" title="Python Tricks" href="python-tricks.html"/>
         <link rel="prev" title="Frameworks &amp; CMSs" href="../php/frameworks.html"/> 
 
   
@@ -100,6 +100,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Datenbankentwicklung</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../dbs/postgres.html">PostgreSQL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dbs/auerhuhn.html">Auerhuhn-DB</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PHP-Wissen</span></p>
@@ -109,9 +110,19 @@
 <p class="caption"><span class="caption-text">Python-Wissen</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python einrichten</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#python-fur-windows-nutzen">Python für Windows nutzen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-fur-windows-nutzen">Python für Windows nutzen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python-in-sublime-ide">Python in Sublime (IDE)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-in-atom-ide">Python in Atom (IDE)</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#virtualenvironments-in-python">Virtualenvironments in Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pipenv">Pipenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#venv">Venv</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python-tricks.html">Python Tricks</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Weitere Ressourcen</span></p>
 <ul>
@@ -189,6 +200,7 @@
             
   <div class="section" id="python-einrichten">
 <h1>Python einrichten<a class="headerlink" href="#python-einrichten" title="Link zu dieser Überschrift">¶</a></h1>
+<p><a class="reference external" href="http://docs.python-guide.org/en/latest/dev/env/">Übersicht</a>.</p>
 <div class="section" id="python-fur-windows-nutzen">
 <h2>Python für Windows nutzen<a class="headerlink" href="#python-fur-windows-nutzen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Python-Package mit pip aus der Kommandozeile installieren. Hierbei steht
@@ -196,6 +208,51 @@
 „pip“ weitergeben soll.</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
 </pre></div>
+</div>
+<div class="section" id="python-in-sublime-ide">
+<h3>Python in Sublime (IDE)<a class="headerlink" href="#python-in-sublime-ide" title="Link zu dieser Überschrift">¶</a></h3>
+</div>
+<div class="section" id="python-in-atom-ide">
+<h3>Python in Atom (IDE)<a class="headerlink" href="#python-in-atom-ide" title="Link zu dieser Überschrift">¶</a></h3>
+<ol class="arabic simple">
+<li>Install Atom</li>
+<li>Go to Atom -&gt; Settings -&gt; Install, search for <em>atom-ide-ui</em> and install</li>
+<li><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">python-language-server</span></code></li>
+<li>Go to Atom -&gt; Settings -&gt; Install, search for <em>script</em> and install (afterwards python files can be run with <span class="guilabel">Ctrl + Shift + b</span>)</li>
+<li>Go to Atom -&gt; Settings -&gt; Install, search for <em>autocomplete-python</em> and install, choose engine <em>Jedi</em></li>
+<li><span class="guilabel">Ctrl + Shift + p</span> -&gt; Listed alle verfügbaren Kommandos auf</li>
+<li><span class="guilabel">Ctrl + Shift + Alt + o</span> -&gt; Script: Run Options, ermöglicht z.B. das Starten der virtuellen Python-Umgebung</li>
+<li><span class="guilabel">Ctrl + Shift + Alt + b</span> -&gt; Script: Run With Profile, ermöglicht das nutzen zuvor gespeicherter Profile</li>
+</ol>
+<p>Launch Atom: das beste ist, Atom im Verzeichnis mit dem eigenen Projekt zu öffnen.
+So bekommmt man vollen Zugang zu den Environment-Variablen.
+<code class="docutils literal"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Rechtsklick</span> <span class="pre">-&gt;</span> <span class="pre">cmd</span> <span class="pre">-&gt;</span> <span class="pre">&quot;atom</span> <span class="pre">.&quot;</span></code></p>
+</div>
+</div>
+<div class="section" id="virtualenvironments-in-python">
+<h2>Virtualenvironments in Python<a class="headerlink" href="#virtualenvironments-in-python" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="pipenv">
+<h3>Pipenv<a class="headerlink" href="#pipenv" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Pipenv managed Pakete auf Projekt-Basis. Außerdem führt es eine Liste über alle
+zur Zeit installierten Pakete in einem Projekt, die genutzt werden kann,
+um dieses Projekt zu replizieren.</p>
+<ol class="arabic simple">
+<li>Check ob neueste Python Version installiert ist <code class="docutils literal"><span class="pre">python</span> <span class="pre">--version</span></code></li>
+<li>Check ob <em>pip</em> installiet ist <code class="docutils literal"><span class="pre">pip</span> <span class="pre">--version</span></code></li>
+<li>Installiere Paket- und Umgebungsmanager <code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">pipenv</span></code></li>
+<li>Check ob <code class="docutils literal"><span class="pre">pipenv</span> <span class="pre">--version</span></code> funktioniert, falls nicht füge <code class="docutils literal"><span class="pre">C:\Users\Flo\AppData\Roaming\Python\Python36\Scripts</span></code> zur PATH Variablen hinzu</li>
+<li><code class="docutils literal"><span class="pre">cd</span> <span class="pre">path\to\myproject</span></code></li>
+<li><code class="docutils literal"><span class="pre">pipenv</span> <span class="pre">install</span> <span class="pre">[package]</span></code></li>
+</ol>
+</div>
+<div class="section" id="venv">
+<h3>Venv<a class="headerlink" href="#venv" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Integrated into Python 3.6.</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">/path/to/new/virtual/environment</span></code></li>
+<li><span class="guilabel">Shift + Rechtsklick</span> in Projektordner -&gt; cmd -&gt; <code class="docutils literal"><span class="pre">..\Scripts\activate</span></code> aktiviert die virtuelle Umgebung. <code class="docutils literal"><span class="pre">Pip</span> <span class="pre">install</span></code> etc. funktionieren</li>
+<li><code class="docutils literal"><span class="pre">deactivate</span></code> deaktiviert sie</li>
+</ol>
 </div>
 </div>
 </div>
@@ -210,7 +267,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../links.html" class="btn btn-neutral float-right" title="Nützliche Links" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="python-tricks.html" class="btn btn-neutral float-right" title="Python Tricks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../php/frameworks.html" class="btn btn-neutral" title="Frameworks &amp; CMSs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

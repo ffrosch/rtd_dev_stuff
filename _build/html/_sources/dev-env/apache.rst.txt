@@ -16,7 +16,7 @@ Installation über Ubuntu-Terminal::
     sudo apt-get install apache2
 
 .. note:: Der Apache-Server wird nach der Installation sofort gestartet und
-          wird bei jedem Neustart automatisch geladen. Er lauft auf 
+          wird bei jedem Neustart automatisch geladen. Er läuft auf 
           **localhost** Port **80**.
 
 .. note:: Bei der Verwendung von **Vagrant** muss im *Vagrantfile* ein
