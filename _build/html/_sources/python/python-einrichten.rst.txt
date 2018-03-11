@@ -16,10 +16,6 @@ Python-Package mit pip aus der Kommandozeile installieren. Hierbei steht
 
     python -m pip install <package-name>
     
-Python in Sublime (IDE)
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
     
 Python in Atom (IDE)
 ~~~~~~~~~~~~~~~~~~~~~
